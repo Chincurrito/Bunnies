@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Bunny poll</title>
+
+        <link href="/client/style.css" rel="stylesheet" type="text/css"/>
+
+        <!-- socket io exposed by server -->
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+<!-- 
+<td>
+  <div class = 'bunnybox'>
+    <img class = 'bunny' src = '/client/bunnies!/'>
+    <br>
+    <button class = 'bunnyNamePlate'></button>
+  </div>
+</td>
+  -->
+    <body>
+        
+      <div id = 'pickertable'>
+      <h2 id = 'title'>Which bunny are you feeling today?</h2>
+      <table>
+        <tr>
+          <td>
+            <div class = 'bunnybox'>
+              <img class = 'bunny' src = '/client/bunnies!/boop.JPG'>
+              <br>
+              <button class = 'bunnyNamePlate' id = '0'>Boop!</button>
+            </div>
+          </td>
+          <td>
+            <div class = 'bunnybox'>
+              <img class = 'bunny' src = '/client/bunnies!/floof.JPG'>
+              <br>
+              <button class = 'bunnyNamePlate' id = '1'>Floof</button>
+            </div>
+          </td>
+          <td>
+            <div class = 'bunnybox'>
+              <img class = 'bunny' src = '/client/bunnies!/Greetings.JPG'>
+              <br>
+              <button class = 'bunnyNamePlate' id = '2'>Greetings</button>
+            </div>
+          </td>
+          <td>
+            <div class = 'bunnybox'>
+              <img class = 'bunny' src = '/client/bunnies!/grrrr.JPG'>
+              <br>
+              <button class = 'bunnyNamePlate' id = '3'>GRRRRRRR</button>
+            </div>
+          </td>
+          <td>
+            <div class = 'bunnybox'>
+              <img class = 'bunny' src = '/client/bunnies!/i go zoom.JPG'>
+              <br>
+              <button class = 'bunnyNamePlate' id = '4'>I go zoom</button>
+            </div>
+          </td>
+          <td>
+            <div class = 'bunnybox'>
+              <img class = 'bunny' src = '/client/bunnies!/lazy bunny.JPG'>
+              <br>
+              <button class = 'bunnyNamePlate' id = '5'>Lazy bunny</button>
+            </div>
+          </td>
+          </tr>
+        <tr>
+        </tr>
+        <tr>
+          <td>
+            <div class = 'bunnybox'>
+              <img class = 'bunny' src = '/client/bunnies!/nom nom.JPG'>
+              <br>
+              <button class = 'bunnyNamePlate' id = '6'>Nom Nom</button>
+            </div>
+          </td>
+          <td>
+            <div class = 'bunnybox'>
+              <img class = 'bunny' src = '/client/bunnies!/nom nom nom.JPG'>
+              <br>
+              <button class = 'bunnyNamePlate' id = '7'>Nom Nom Nom</button>
+            </div>
+          </td>
+          <td>
+            <div class = 'bunnybox'>
+              <img class = 'bunny' src = '/client/bunnies!/Plbbbbt.JPG'>
+              <br>
+              <button class = 'bunnyNamePlate' id = '8'>Plbbbbt!</button>
+            </div>
+          </td>
+          <td>
+            <div class = 'bunnybox'>
+              <img class = 'bunny' src = '/client/bunnies!/shy bunny.JPG'>
+              <br>
+              <button class = 'bunnyNamePlate' id = '9'>Shy bunny</button>
+            </div>
+          </td>
+          <td>
+            <div class = 'bunnybox'>
+              <img class = 'bunny' src = '/client/bunnies!/sleepy.JPG'>
+              <br>
+              <button class = 'bunnyNamePlate' id = '10'>Sleepy bunny</button>
+            </div>
+          </td>
+          <td>
+            <div class = 'bunnybox'>
+              <img class = 'bunny' src = '/client/bunnies!/T O A D.JPG'>
+              <br>
+              <button class = 'bunnyNamePlate' id = '11'>Toad!</button>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <button id = 'skip'>Skip to results</button>
+    </div>
+    <div id = 'resultsbox'>
+      <h2>The results!</h2>
+      <div class = 'bar'><div class = 'textW1'>Boop! <span class = 'precentSpan'></span></div></div>
+      <div class = 'bar'><div class = 'textW1'>Floof <span class = 'precentSpan'></span></div></div>
+      <div class = 'bar'><div class = 'textW1'>Greetings <span class = 'precentSpan'></span></div></div>
+      <div class = 'bar'><div class = 'textW1'>GRRRR <span class = 'precentSpan'></span></div></div>
+      <div class = 'bar'><div class = 'textW1'>I go zoom <span class = 'precentSpan'></span></div></div>
+      <div class = 'bar'><div class = 'textW1'>Lazy bunny <span class = 'precentSpan'></span></div></div>
+      <div class = 'bar'><div class = 'textW1'>Nom nom <span class = 'precentSpan'></span></div></div>
+      <div class = 'bar'><div class = 'textW1'>Nom nom nom <span class = 'precentSpan'></span></div></div>
+      <div class = 'bar'><div class = 'textW1'>Plbbbbt! <span class = 'precentSpan'></span></div></div>
+      <div class = 'bar'><div class = 'textW1'>Shy bunny <span class = 'precentSpan'></span></div></div>
+      <div class = 'bar'><div class = 'textW1'>Sleepy bunny <span class = 'precentSpan'></span></div></div>
+      <div class = 'bar'><div class = 'textW1'>Toad! <span class = 'precentSpan'></span></div></div>
+      <br>
+      <button id = 'reset'>Back to bunnies</button>
+    </div>
+    </div>
+    
+        <script src="/client/script.js"></script>
+    </body>
+</html>

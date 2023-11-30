@@ -1,0 +1,46 @@
+body{
+  font-family:"Lucida Console", "Courier New", "monospace";
+  background-color:black;
+  color:white;
+}
+.bunny {
+  width: 11vmax;
+  padding-left: 0.25vmax;
+  padding-right:0.25vmax;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+.bunnybox {
+  width:11.5vmax;
+}
+td{
+  border: 2px solid white;
+}
+table{
+  width:75vmax;
+}
+.bar {
+  height:5vmin;
+  font-family: "Times New Roman", "Times", 'serif';
+  padding:2px
+}
+h2{
+  text-align:center;
+}
+.textW1{
+  float:right;
+  background-color: darkgray;
+}
+button {
+  width:9vmax;
+  height:2vmax;
+  background-color:lightpink;
+  border-radius:9px;
+  text-align:center;
+}
+#skip {
+  width:15vmax;
+}
+#reset {
+  width:12vmax;
+}
